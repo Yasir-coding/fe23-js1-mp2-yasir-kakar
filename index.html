@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/script.js" defer></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="#" type="image/x-icon">
+  <title>SSP</title>
+</head>
+<body>
+  <div>
+    <h1>Sten Sax Påse</h1>
+    <p>Välkommen till det klassiska spelet sten sax påse mot datorn.</p>
+    <p>Börja med att skriva in ditt namn och kör hårt!</p>
+  </div>
+  <div id="enterNameDiv">
+    <form>
+    <label>Skriv in ditt namn</label>
+    <input type="text" minlength="3" maxlength="15" required>
+    <button id="enterName">Klicka här</button>
+  </form>
+  </div>
+  <div id="imgDiv">
+    <img src="images/stone.png" id="sten">
+    <img src="images/scissors.png" id="sax">
+    <img src="images/garbage-bag.png" id="påse">
+  </div>
+  <div>
+    <p id="playerName">Spelarens namn</p>
+    <p id="playerPoints">0</p>
+    <p>AI</p>
+    <p id="aiPoints">0</p>
+  </div>
+
+  <div>
+    <p id="pointAnnounce"></p>
+    <h1 id="winner"></h1>
+  </div>
+
+  <div>
+    <button id="restart">Starta om</button>
+  </div>
+  
+</body>
+</html>
