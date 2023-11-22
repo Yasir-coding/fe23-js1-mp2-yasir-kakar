@@ -1,29 +1,20 @@
 let playerName = document.querySelector("#playerName");
-
 let btn = document.querySelector("#enterName");
+let enterNameDiv = document.querySelector("#enterNameDiv");
 
 let array = ["sten","sax","påse"];
+let randomNumber;
 
 let playerPoints = 0;
-
 let computerPoints = 0;
 
 let pP = document.querySelector("#playerPoints");
-
 let cP = document.querySelector("#aiPoints");
 
-let randomNumber;
-
-let enterNameDiv = document.querySelector("#enterNameDiv");
-
 let announce = document.querySelector("#pointAnnounce");
-
 let winner = document.querySelector("#winner");
-
 let imgDiv = document.querySelector("#imgDiv");
-
 let restart = document.querySelector("#restart");
-
 let form = document.querySelector("form");
 
 restart.addEventListener("click", () => {
@@ -39,9 +30,7 @@ form.addEventListener("submit", (event) => {
 
 });
 
-
 imgDiv.addEventListener("click", (e) => {
-  
   randomNumber = Math.floor(Math.random() * 3);
 
   if (e.target.id == "sten" && randomNumber === 2 || e.target.id == "sax" && randomNumber === 0 || e.target.id == "påse" && randomNumber === 1) {
@@ -64,7 +53,6 @@ imgDiv.addEventListener("click", (e) => {
   }
 
   pP.innerText = playerPoints;
-
   cP.innerText = computerPoints;
 
   if (playerPoints === 3) {
@@ -78,10 +66,3 @@ imgDiv.addEventListener("click", (e) => {
   }
 
 });
-
-
-
-
-
-
-
