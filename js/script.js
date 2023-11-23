@@ -12,7 +12,7 @@ let pP = document.querySelector("#playerPoints");
 let cP = document.querySelector("#aiPoints");
 
 let announce = document.querySelector("#pointAnnounce");
-let winner = document.querySelector("#winner");
+let winnerText = document.querySelector("#winnerH1");
 let imgDiv = document.querySelector("#imgDiv");
 let restart = document.querySelector("#restart");
 let form = document.querySelector("form");
@@ -56,11 +56,11 @@ imgDiv.addEventListener("click", (e) => {
   cP.innerText = computerPoints;
 
   if (playerPoints === 3) {
-    winner.innerText = `Du vann`;
+    winnerText.innerText = `Du vann`;
     restart.style.display = "block";
     imgDiv.style.display = "none";
   } else if (computerPoints === 3) {
-    winner.innerText = "AI vann";
+    winnerText.innerText = "AI vann";
     restart.style.display = "block";
     imgDiv.style.display = "none";
   }
