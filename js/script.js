@@ -14,10 +14,11 @@ let cP = document.querySelector("#aiPoints");
 let announce = document.querySelector("#pointAnnounce");
 let winnerText = document.querySelector("#winnerH1");
 let imgDiv = document.querySelector("#imgDiv");
-let restart = document.querySelector("#restart");
+let restartBtn = document.querySelector("#restartBtn");
 let form = document.querySelector("form");
 
-restart.addEventListener("click", () => {
+
+restartBtn.addEventListener("click", () => {
   location.reload();
 })
 
@@ -62,14 +63,14 @@ imgDiv.addEventListener("click", (e) => {
   cP.innerText = computerPoints;
 
   // If satserna visar vem som har vunnit
-  
+
   if (playerPoints === 3) {
     winnerText.innerText = `Du vann`;
-    restart.style.display = "block";
+    restartBtn.style.display = "block";
     imgDiv.style.display = "none";
   } else if (computerPoints === 3) {
     winnerText.innerText = "AI vann";
-    restart.style.display = "block";
+    restartBtn.style.display = "block";
     imgDiv.style.display = "none";
   }
 
