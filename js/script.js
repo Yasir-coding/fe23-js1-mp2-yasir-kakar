@@ -21,6 +21,8 @@ restart.addEventListener("click", () => {
   location.reload();
 })
 
+// Lägger till namn
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   let name = document.querySelector("input").value;
@@ -29,6 +31,8 @@ form.addEventListener("submit", (event) => {
   enterNameDiv.style.display = "none";
 
 });
+
+// If satserna reagerar på vad spelarens och datorn val och även ger ut poäng till respektive
 
 imgDiv.addEventListener("click", (e) => {
   randomNumber = Math.floor(Math.random() * 3);
@@ -52,9 +56,13 @@ imgDiv.addEventListener("click", (e) => {
     announce.classList.add("blue");
   }
 
+  // Visar poängen på sidan
+
   pP.innerText = playerPoints;
   cP.innerText = computerPoints;
 
+  // If satserna visar vem som har vunnit
+  
   if (playerPoints === 3) {
     winnerText.innerText = `Du vann`;
     restart.style.display = "block";
